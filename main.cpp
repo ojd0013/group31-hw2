@@ -1,4 +1,6 @@
 #include <iostream>
+#include <stdexcept>
+#include <iomainip>
 
 using namespace std;
 
@@ -44,6 +46,80 @@ int main( int argc, char * argv[] )
 	yearly_interest_rate = arguments[1];
 	monthly_payment = arguments[2];
 	cout << loan_amount << " " << yearly_interest_rate << " " << monthly_payment << endl;
+       
+// Variables for loan
+
+        double monthly_rate;
+        double monthly_interest;
+        double principal;
+	double total_interest = 0;
+	double last_payment = 0;
+
+        int months = 0;
+
+//convert yearly interest rate to monthly
+	monthly_rate = yearly_interest_rate / 12;
+
+// formatting from the hints
+	cout.setf(ios::fixed);
+	cout.setf(ios::showpoint);
+	cout.precision(2);
+	
+	
+	//make sure values are valid
+	if (loan_amount <= 0)
+	{
+		cout << "Invalid loan amount" << endl;
+	       return -1;
+	}
+
+	if (yearly_interest_rate < 0)
+	{
+		cout << "Invalid interest rate" << endl;
+		return -1;
+	}
+
+	double interest_rate_calculation = monthly_rate / 100;
+
+        if (monthly_payment <= loan_amount * intrest_rate_calculations)
+	{
+		cout << "Invalid monthly payment" << endl;
+		return -1;
+	}
+   // AMORTIZATION TABLE from hint
+
+   cout << "********************************************************" << endl;
+   cout << "                Amortization Table " << endl;  
+   cout << "********************************************************" << endl;   
+     
+         cout << left
+	 << setw(8) << "Month"
+	 << setw(12) << "Balance"
+	 << setw(12) << "Payment"
+	 << setw(8) << "Rate"
+	 << setw(12) << "Interest"
+	 << setw(12) << "Principal"
+	 << endl;
+
+   //month zero
+   count << left
+         << setw(8) << current month
+         << "$" << setw(11) << loan_amount
+         << setw(12) << "N/A"
+         << setw(8) << "N/A"
+         << setw(12) << "N/A"
+         << setw(12) << "N/A"
+         << endl;
+
+   // can start here we need monthly calculation loop for each month's interest
+   // print each row of the remaining balances using principal
+   // and after that should be the last payment and final totals
+   
+    while (loan_amount > 0)
+    {
+	    //...
+    }
+
 
 	return 0;
 }
