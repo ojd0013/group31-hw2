@@ -54,6 +54,7 @@ int main( int argc, char * argv[] )
         double principal;
 	double total_interest = 0;
 	double last_payment = 0;
+	int current_month = 0;
 
         int months = 0;
 
