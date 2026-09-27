@@ -1,6 +1,6 @@
 #include <iostream>
 #include <stdexcept>
-#include <iomainip>
+#include <iomanip>
 
 using namespace std;
 
