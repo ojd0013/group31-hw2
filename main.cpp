@@ -81,7 +81,7 @@ int main( int argc, char * argv[] )
 
 	double interest_rate_calculation = monthly_rate / 100;
 
-        if (monthly_payment <= loan_amount * intrest_rate_calculations)
+        if (monthly_payment <= loan_amount * interest_rate_calculations)
 	{
 		cout << "Invalid monthly payment" << endl;
 		return -1;
@@ -102,14 +102,14 @@ int main( int argc, char * argv[] )
 	 << endl;
 
    //month zero
-   count << left
-         << setw(8) << current month
-         << "$" << setw(11) << loan_amount
-         << setw(12) << "N/A"
-         << setw(8) << "N/A"
-         << setw(12) << "N/A"
-         << setw(12) << "N/A"
-         << endl;
+   cout << left
+        << setw(8) << current_month
+        << "$" << setw(11) << loan_amount
+        << setw(12) << "N/A"
+        << setw(8) << "N/A"
+        << setw(12) << "N/A"
+        << setw(12) << "N/A"
+        << endl;
 
    // can start here we need monthly calculation loop for each month's interest
    // print each row of the remaining balances using principal
