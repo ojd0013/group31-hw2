@@ -81,7 +81,7 @@ int main( int argc, char * argv[] )
 
 	double interest_rate_calculation = monthly_rate / 100;
 
-        if (monthly_payment <= loan_amount * interest_rate_calculations)
+        if (monthly_payment <= loan_amount * interest_rate_calculation)
 	{
 		cout << "Invalid monthly payment" << endl;
 		return -1;
