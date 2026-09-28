@@ -141,7 +141,7 @@ int main( int argc, char * argv[] )
 			}
 		total_interest += interest; // adding the interest up for final output
 		// below is printing out the month information
-		cout << current_month << "\t$" << loan_amount << "\t$" << last_payment << "\t$" << interest_rate_calculation << "\t$" << interest << "\t$" << principal << endl;
+		current_month << "$" << setw(11) << loan_amount << "$" << setw(11) << last_payment << setw(8) << interest_rate_calculation << "$" << setw(11) << interest << "$" << setw(11) << principal << endl;
 		current_month++;
     }
 	// below is formating and printing of the final outputs
