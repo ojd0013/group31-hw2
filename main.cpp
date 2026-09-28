@@ -120,18 +120,12 @@ int main( int argc, char * argv[] )
     while (loan_amount > 0)
     {
 		// used for first month + came from the hint sheet
-	    if (current_month == 0) {
-			cout << left 
-        	<< setw(8) << current_month
-        	<< "$" << setw(11) << loan_amount
-			if (loan_amount < 1000) cout << "\t"; {
-        		<< setw(12) << "N/A"
-        		<< setw(8) << "N/A"
-        		<< setw(12) << "N/A"
-        		<< setw(12) << "N/A"
-        		<< endl;
-			
-			}
+	    if (current_month == 0) { 
+			cout << current_month++ << "\t$" << loan_amount; 
+			if (loan_amount < 1000) cout << "\t"; { 
+				cout << "\t" << "N/A\tN/A\tN/A\tN/A\n"; 
+			} 
+		}
 			
 		else 
 		{
