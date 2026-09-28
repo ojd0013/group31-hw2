@@ -121,16 +121,18 @@ int main( int argc, char * argv[] )
     {
 		// used for first month + came from the hint sheet
 	    if (current_month == 0) {
-			cout << left
+			cout << left 
         	<< setw(8) << current_month
         	<< "$" << setw(11) << loan_amount
+			if (loan_amount < 1000) cout << "\t"; {
+        		<< setw(12) << "N/A"
+        		<< setw(8) << "N/A"
+        		<< setw(12) << "N/A"
+        		<< setw(12) << "N/A"
+        		<< endl;
 			
-        	<< setw(12) << "N/A"
-        	<< setw(8) << "N/A"
-        	<< setw(12) << "N/A"
-        	<< setw(12) << "N/A"
-        	<< endl;
-		}
+			}
+			
 		else 
 		{
 			double interest = loan_amount * interest_rate_calculation; // interest owed in the period so it updates
