@@ -93,13 +93,13 @@ int main( int argc, char * argv[] )
    cout << "                Amortization Table " << endl;  
    cout << "********************************************************" << endl;   
      
-         cout << left
-	 << setw(8) << "Month"
-	 << setw(12) << "Balance"
-	 << setw(12) << "Payment"
-	 << setw(8) << "Rate"
-	 << setw(12) << "Interest"
-	 << setw(12) << "Principal"
+         cout <<
+	 << "Month"
+	 << "\tBalance"
+	 << "\tPayment"
+	 << "\tRate"
+	 << "\tInterest"
+	 << "\tPrincipal"
 	 << endl;
 
    //month zero
@@ -144,7 +144,7 @@ int main( int argc, char * argv[] )
 			}
 		total_interest += interest; // adding the interest up for final output
 		// below is printing out the month information
-		cout << "\t" << current_month << "\t$" << loan_amount << "\t$" << last_payment << "\t$" << interest_rate_calculation << "\t$" << interest << "\t$" << principal << endl;
+		cout << current_month << "\t$" << loan_amount << "\t$" << last_payment << "\t$" << interest_rate_calculation << "\t$" << interest << "\t$" << principal << endl;
 		current_month++;
     	}
 	}
