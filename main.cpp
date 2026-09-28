@@ -94,7 +94,13 @@ int main( int argc, char * argv[] )
    cout << "********************************************************" << endl;   
      
 	
-	 cout << "Month" << "\tBalance"<< "\tPayment" << "\tRate"<< "\tInterest" << "\tPrincipal" << endl;
+	cout << left
+	<< setw(8) << "Month" 
+	<< setw(11) << "Balance"
+	<< setw(12) << "Payment" 
+	<< setw(8) << "Rate"
+	<< setw(12) << "Interest" 
+	<< setw(12) << "Principal" << endl;
 
    //month zero
    //cout << left
@@ -117,7 +123,7 @@ int main( int argc, char * argv[] )
 	    if (current_month == 0) {
 			cout << current_month++ << "\t$" << loan_amount;
 		
-			if (loan_amount < 1000); {
+			if (loan_amount < 1000) cout << "\t"; {
 				cout << "\t" << "N/A\tN/A\tN/A\tN/A\n";
 			}
 		}
@@ -138,7 +144,7 @@ int main( int argc, char * argv[] )
 			}
 		total_interest += interest; // adding the interest up for final output
 		// below is printing out the month information
-		cout << current_month << "\t$" << loan_amount << "\t$" << last_payment << "\t" << monthly_rate << "\t$" << interest << "\t$" << principal << endl;
+		cout << setw(8) << current_month << "$" << setw(11) << loan_amount << "$" << setw(12) << last_payment << "$" << setw(8) << monthly_rate << setw(12) << interest << "$" << setw(12) << principal << "$" << endl;
 		current_month++;
     	}
 	}
