@@ -49,7 +49,7 @@ int main( int argc, char * argv[] )
        
 // Variables for loan
 
-        float monthly_rate;
+        double monthly_rate;
         double monthly_interest;
         double principal;
 	double total_interest = 0;
