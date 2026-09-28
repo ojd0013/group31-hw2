@@ -146,7 +146,7 @@ int main( int argc, char * argv[] )
     }
 	// below is formating and printing of the final outputs
 	cout << "****************************************************************\n";
-	cout << "\nIt takes " << --current_month << " months to pay off " << "the loan.\n" << "Total interest paid is: $" << total_interest;
+	cout << "\nIt takes " << --current_month << " months to pay off " << "the loan.\n" << "Total interest paid is: $" << total_interest << endl;
 	return 0;
 }
 }
