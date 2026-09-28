@@ -94,13 +94,7 @@ int main( int argc, char * argv[] )
    cout << "********************************************************" << endl;   
      
 	
-	 cout << "Month"
-	 << "\tBalance"
-	 << "\tPayment"
-	 << "\tRate"
-	 << "\tInterest"
-	 << "\tPrincipal"
-	 << endl;
+	 cout << "Month" << "\tBalance"<< "\tPayment" << "\tRate"<< "\tInterest" << "\tPrincipal" << endl;
 
    //month zero
    //cout << left
@@ -150,6 +144,6 @@ int main( int argc, char * argv[] )
 	}
 	// below is formating and printing of the final outputs
 	cout << "****************************************************************\n";
-	cout << "\nIt takes " << --current_month << " months to pay off " << "the loan.\n" << "Total interest paid is: $" << total_interest << endl;
+	cout << "\nIt takes " << --current_month << " months to pay off " << "the loan.\n" << "Total interest paid is: $" << total_interest << endl << endl;
 	return 0;
 }
