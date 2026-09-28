@@ -103,14 +103,14 @@ int main( int argc, char * argv[] )
 	<< setw(12) << "Principal" << endl;
 
    //month zero
-   //cout << left
-   //     << setw(8) << current_month
-   //     << "$" << setw(11) << loan_amount
-   //     << setw(12) << "N/A"
-   //     << setw(8) << "N/A"
-   //     << setw(12) << "N/A"
-   //     << setw(12) << "N/A"
-   //     << endl;
+   cout << left
+        << setw(8) << current_month
+        << "$" << setw(11) << loan_amount
+        << setw(12) << "N/A"
+        << setw(8) << "N/A"
+        << setw(12) << "N/A"
+        << setw(12) << "N/A"
+        << endl;
 
    // can start here we need monthly calculation loop for each month's interest
    // print each row of the remaining balances using principal
@@ -121,11 +121,14 @@ int main( int argc, char * argv[] )
     {
 		// used for first month + came from the hint sheet
 	    if (current_month == 0) {
-			cout << current_month++ << "\t$" << loan_amount;
-		
-			if (loan_amount < 1000) cout << "\t"; {
-				cout << "\t" << "N/A\tN/A\tN/A\tN/A\n";
-			}
+			cout << left
+        	<< setw(8) << current_month
+        	<< "$" << setw(11) << loan_amount
+        	<< setw(12) << "N/A"
+        	<< setw(8) << "N/A"
+        	<< setw(12) << "N/A"
+        	<< setw(12) << "N/A"
+        	<< endl;
 		}
 		else 
 		{
