@@ -64,7 +64,7 @@ int main( int argc, char * argv[] )
 // formatting from the hints
 	cout.setf(ios::fixed);
 	cout.setf(ios::showpoint);
-	cout.precision(1);
+	cout.precision(2);
 	
 	
 	//make sure values are valid
