@@ -93,8 +93,8 @@ int main( int argc, char * argv[] )
    cout << "                Amortization Table " << endl;  
    cout << "********************************************************" << endl;   
      
-         cout <<
-	 << "Month"
+	
+	 cout << "Month"
 	 << "\tBalance"
 	 << "\tPayment"
 	 << "\tRate"
