@@ -124,6 +124,7 @@ int main( int argc, char * argv[] )
 			cout << left
         	<< setw(8) << current_month
         	<< "$" << setw(11) << loan_amount
+			
         	<< setw(12) << "N/A"
         	<< setw(8) << "N/A"
         	<< setw(12) << "N/A"
