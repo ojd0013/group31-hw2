@@ -45,7 +45,7 @@ int main( int argc, char * argv[] )
 	loan_amount = arguments[0];
 	yearly_interest_rate = arguments[1];
 	monthly_payment = arguments[2];
-	cout << loan_amount << " " << yearly_interest_rate << " " << monthly_payment << endl;
+	
        
 // Variables for loan
 
@@ -70,7 +70,7 @@ int main( int argc, char * argv[] )
 	//make sure values are valid
 	if (loan_amount <= 0)
 	{
-		cout << "Invalid loan amount" << endl;
+		cout << "Invalid loan" << endl;
 	       return -1;
 	}
 
@@ -79,12 +79,16 @@ int main( int argc, char * argv[] )
 		cout << "Invalid interest rate" << endl;
 		return -1;
 	}
-
+        if (monthly_payment <= 0)
+	{
+		cout << "Invalid monthly payment" << endl;
+		return -1;
+	}
 	double interest_rate_calculation = monthly_rate / 100;
 
         if (monthly_payment <= loan_amount * interest_rate_calculation)
 	{
-		cout << "Invalid monthly payment" << endl;
+		cout << "Insufficient payment" << endl;
 		return -1;
 	}
    // AMORTIZATION TABLE from hint
