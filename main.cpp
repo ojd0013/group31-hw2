@@ -71,13 +71,13 @@ int main( int argc, char * argv[] )
 	if (loan_amount <= 0)
 	{
 		cout << "Invalid loan" << endl;
-	       return -1;
+	       return 0;
 	}
 
 	if (yearly_interest_rate < 0)
 	{
 		cout << "Invalid interest rate" << endl;
-		return -1;
+		return 0;
 	}
         if (monthly_payment <= 0)
 	{
