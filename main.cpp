@@ -82,14 +82,14 @@ int main( int argc, char * argv[] )
         if (monthly_payment <= 0)
 	{
 		cout << "Invalid monthly payment" << endl;
-		return -1;
+		return 0;
 	}
 	double interest_rate_calculation = monthly_rate / 100;
 
         if (monthly_payment <= loan_amount * interest_rate_calculation)
 	{
 		cout << "Insufficient payment" << endl;
-		return -1;
+		return 0;
 	}
    // AMORTIZATION TABLE from hint
 
