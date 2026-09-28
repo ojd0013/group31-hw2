@@ -123,7 +123,7 @@ int main( int argc, char * argv[] )
 	    if (current_month == 0) {
 			cout << current_month++ << "\t$" << loan_amount;
 		
-			if (loan_amount < 1000) cout << "\t"; {
+			if (loan_amount < 1000); {
 				cout << "\t" << "N/A\tN/A\tN/A\t\tN/A\n";
 			}
 		}
@@ -131,20 +131,20 @@ int main( int argc, char * argv[] )
 		{
 			double interest = loan_amount * interest_rate_calculation; // interest owed in the period so it updates
 			// below is the last monthe that includes whatever is left to be paid
-			if (loan_amount * (1 + interest_rate_calculation) < monthly_rate) {
+			if (loan_amount * (1 + interest_rate_calculation) < monthly_payment) {
 				last_payment = loan_amount + interest;
 				principal = loan_amount;
 				loan_amount = 0;
 			}
 			// below is a normal month 
-			if (loan_amount * (1 + interest_rate_calculation) >= monthly_rate) {
+			if (loan_amount * (1 + interest_rate_calculation) >= monthly_payment) {
 				last_payment = monthly_payment;
 				principal = monthly_payment - interest;
 				loan_amount -= principal;
 			}
 		total_interest += interest; // adding the interest up for final output
 		// below is printing out the month information
-		cout << current_month << "\t$" << loan_amount << "\t$" << last_payment << "\t$" << monthly_rate << "\t$" << interest << "\t$" << principal << endl;
+		cout << current_month << "\t$" << loan_amount << "\t$" << last_payment << "\t" << monthly_rate << "\t$" << interest << "\t$" << principal << endl;
 		current_month++;
     	}
 	}
