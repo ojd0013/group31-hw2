@@ -115,12 +115,36 @@ int main( int argc, char * argv[] )
    // can start here we need monthly calculation loop for each month's interest
    // print each row of the remaining balances using principal
    // and after that should be the last payment and final totals
-   
+	double interest = loan_amount * interest_rate_calculation; // interest owed in tghe period
+
     while (loan_amount > 0)
     {
-	    //...
+		// used for first month + came from the hint sheet
+	    if (current_month == 0) {
+			cout << current_month++ << "\t$" << loan_amount;
+		if (loan_amount < 1000) cout << "\t";
+			cout << "\t" << "N/A\tN/A\tN/A\t\tN/A\n";
+		}
+		else {
+			// below is the last monthe that includes whatever is left to be paid
+			if (loan_amount * (1 + interest_rate_calculation) < monthly_rate) {
+				last_payment = loan_amount + interest;
+				principal = loan_amount
+				loan_amount = 0;
+			}
+			// below is a normal month 
+			if (loan_amount * (1 + interest_rate_calculation) >= monthly_rate) {
+				last_payment = monthly_payment;
+				principal = loan_amount - interest;
+				loan_amount -= principal;
+			}
+		total_interest += interest; // adding the interest up for final output
+		// below is printing out the month information
+		cout << current_month << "\t$" << loan_amount << "\t$" << last_payment << "\t$" << interest_rate_calculation << "\t$" << interest << "\t$" << principal << endl;
+		currrent_month++;
     }
-
-
+	// below is formating and printing of the final outputs
+	cout << "****************************************************************\n"
+	cout << "\nIt takes " << --current_month << " months to pay off " << "the loan.\n" << "Total interest paid is: $" << total_interest;
 	return 0;
 }
